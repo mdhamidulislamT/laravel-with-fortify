@@ -13,6 +13,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
 });
 Route::get('/manyToMany', [RelationshipController::class, 'manyToMany'])->name('manyToMany');
 Route::get('/hasManyThrough', [RelationshipController::class, 'hasManyThrough'])->name('hasManyThrough');
-
+// message app 
 Route::post('/message', [MessageController::class, 'message'])->name('message');
 
