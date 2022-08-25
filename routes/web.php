@@ -15,5 +15,4 @@ Route::get('/manyToMany', [RelationshipController::class, 'manyToMany'])->name('
 Route::get('/hasManyThrough', [RelationshipController::class, 'hasManyThrough'])->name('hasManyThrough');
 
 Route::post('/message', [MessageController::class, 'message'])->name('message');
-Route::post('/sendmessage', [MessageController::class, 'sendMessage'])->name('sendmessage');
 

@@ -18,14 +18,4 @@ class MessageController extends Controller
         response()->json(['data'=> "Message Sent Successfully!"]);
     }
 
-
-    public function sendMessage(Request $request)
-    {
-        $userType = Auth::user()->id;
-        $username = Auth::user()->name;
-        $message = $request->message;
-        //event(new Message($userType, $username, $message));
-
-        response()->json(['data'=> "Message Sent Successfully!"]);
-    }
 }
