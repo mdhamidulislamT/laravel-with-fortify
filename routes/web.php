@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\RelationshipController;
 use Illuminate\Support\Facades\Route;
 
@@ -12,3 +13,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 });
 Route::get('/manyToMany', [RelationshipController::class, 'manyToMany'])->name('manyToMany');
 Route::get('/hasManyThrough', [RelationshipController::class, 'hasManyThrough'])->name('hasManyThrough');
+
+Route::post('/message', [MessageController::class, 'message'])->name('message');
+Route::post('/sendmessage', [MessageController::class, 'sendMessage'])->name('sendmessage');
+
